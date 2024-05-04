@@ -1,8 +1,7 @@
-// import React from 'react';
 import { Link } from "react-router-dom";
 import img from "../../assets/images/login/login.svg";
 
-const Login = () => {
+const SignUp = () => {
   const handleLogin = (event) => {
     event.preventDefault();
   };
@@ -15,7 +14,19 @@ const Login = () => {
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <form onSubmit={handleLogin} className="card-body">
-              <h1 className="text-5xl font-bold  text-center">Login </h1>
+              <h1 className="text-5xl font-bold  text-center">Sign up </h1>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Name </span>
+                </label>
+                <input
+                  name="name"
+                  type="name"
+                  placeholder="name"
+                  className="input input-bordered"
+                  required
+                />
+              </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
@@ -30,7 +41,7 @@ const Login = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text">Confirm Password</span>
                 </label>
                 <input
                   name="password"
@@ -46,16 +57,16 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
+                <button className="btn btn-primary">Sign up</button>
               </div>
             </form>
             <p className="text-center my-4 ">
-              New to Car Doctors
+              Already Have an Account
               <Link
                 className="text-orange-600 font-bold ml-2 text-xl underline"
-                to="/signup"
+                to="/login"
               >
-                Sign up
+                Please Login
               </Link>
             </p>
           </div>
@@ -65,4 +76,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;
